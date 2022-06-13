@@ -19,7 +19,7 @@
       {%- if have_image -%}
         {%- capture collection_image -%}
           <div class="slide-nav__image">
-            <img src="{{ have_image | img_url: '400x' }}" alt="{{ collections[subcollection_handle].title }}">
+            <img class="lazy2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-src="{{ have_image | img_url: '400x' }}" alt="{{ collections[subcollection_handle].title }}">
           </div>
         {%- endcapture -%}
       {%- endif -%}

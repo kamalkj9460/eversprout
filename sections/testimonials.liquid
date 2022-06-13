@@ -49,8 +49,10 @@
                 <div class="testimonail-image{% if section.settings.round_images %} testimonail-image--round{% endif %}">
                   <div class="image-wrap text-spacing" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
                     {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                    <img class="lazyload"
-                        data-src="{{ img_url }}"
+                    <img class="lazyloaded lazy2 lazy3"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                        data-src="{{ block.settings.image | img_url: '720x' }}"
+                        data-mobsrc="{{ block.settings.image | img_url: '360x' }}"
                         data-widths="[180, 360, 540, 720]"
                         data-aspectratio="{{ block.settings.image.aspect_ratio }}"
                         data-sizes="auto"
